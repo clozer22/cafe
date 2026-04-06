@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter);
+  --font-fancy: var(--font-playfair);
+
+  --color-espresso: #1B1212;
+  --color-mocha: #966F33;
+  --color-cream: #F5F5DC;
+  --color-copper: #B87333;
+  --color-cacao: #3D2B1F;
+
+  --radius-cozy: 1.5rem;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F5F5DC;
+  --foreground: #1B1212;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-glow-mocha {
+    text-shadow: 0 0 20px rgba(150, 111, 51, 0.2);
+  }
+
+  .btn-cozy {
+    @apply px-8 py-4 bg-espresso text-cream tracking-widest text-sm transition-all duration-500 hover:bg-mocha hover:scale-105 active:scale-95 rounded-xl cursor-pointer shadow-xl;
+    font-family: var(--font-playfair);
+  }
+
+  .glass-coffee {
+    background: rgba(27, 18, 18, 0.03);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(27, 18, 18, 0.05);
+  }
+}
+
+::selection {
+  background: #B87333;
+  color: #F5F5DC;
 }
