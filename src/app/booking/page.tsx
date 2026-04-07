@@ -21,12 +21,12 @@ export default function BookingPage() {
   };
 
   return (
-    <main className="bg-[#1B1212] min-h-screen relative overflow-hidden">
+    <main className="bg-charcoal min-h-screen relative overflow-hidden text-ivory">
       <CoffeeBeansBackground />
       <Navbar />
 
-      <div className="pt-48 pb-32 container mx-auto px-8 relative z-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+      <div className="pt-32 sm:pt-48 pb-32 container mx-auto px-8 relative z-10 max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
           {/* Info Side */}
           <motion.div
@@ -34,11 +34,12 @@ export default function BookingPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="font-fancy text-mocha text-xl sm:text-2xl mb-4 block">Reservations</span>
-            <h1 className="font-fancy text-5xl sm:text-7xl md:text-8xl text-cream mb-8 sm:mb-12 uppercase tracking-tighter leading-[0.9]">
-              RESERVE <br />
-              <span className="italic text-mocha">YOUR</span> RITUAL.
+            <span className="font-fancy text-gold text-xl sm:text-2xl mb-4 block tracking-[0.3em] uppercase">Reservations</span>
+            <h1 className="font-gothic text-6xl sm:text-8xl text-ivory mb-8 sm:mb-12 uppercase tracking-wider leading-[0.9]">
+              SECURE <br />
+              <span className="italic text-gold">THE</span> SANCTUM.
             </h1>
+            <div className="w-24 h-[1px] bg-gold/30 mb-8" />
             <p className="text-cream/40 text-lg uppercase tracking-widest leading-loose mb-16 max-w-md">
               Secure a cozy corner for your morning brew or a grand table for afternoon social rituals.
             </p>

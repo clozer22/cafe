@@ -19,18 +19,21 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex items-center justify-between glass-coffee px-4 sm:px-8 py-4 rounded-2xl relative z-50">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-espresso rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform border border-mocha/20">
-            <Coffee className="w-5 h-5 sm:w-6 sm:h-6 text-mocha" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gold rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform border border-gold/20 shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+            <Coffee className="w-5 h-5 sm:w-6 sm:h-6 text-charcoal" />
           </div>
-          <span className="font-fancy text-xl sm:text-2xl tracking-tighter text-cream truncate max-w-[120px] sm:max-w-none">Velvet <span className="text-mocha italic">Brew</span></span>
+          <div className="flex flex-col -gap-1">
+            <span className="font-gothic text-2xl sm:text-3xl tracking-wider text-gold leading-none">The Roasted Bean</span>
+            <span className="font-fancy text-[10px] sm:text-xs tracking-[0.4em] uppercase text-ivory/60 ml-1">Cafe</span>
+          </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-10 font-fancy text-sm tracking-widest uppercase">
-          <Link href="/" className="hover:text-mocha transition-colors text-cream/70">Origins</Link>
-          <Link href="/menu" className="hover:text-mocha transition-colors text-cream/70">The Menu</Link>
-          <Link href="/booking" className="hover:text-mocha transition-colors text-cream/70">Reservations</Link>
-          <Link href="#contact" className="hover:text-mocha transition-colors text-cream/70">Visit Us</Link>
+        <div className="hidden md:flex items-center gap-10 font-fancy text-[10px] tracking-[0.4em] uppercase">
+          <Link href="/" className="hover:text-gold transition-all text-ivory/60 hover:tracking-[0.5em]">The Sanctum</Link>
+          <Link href="/menu" className="hover:text-gold transition-all text-ivory/60 hover:tracking-[0.5em]">The Menu</Link>
+          <Link href="/booking" className="hover:text-gold transition-all text-ivory/60 hover:tracking-[0.5em]">Reservations</Link>
+          <Link href="#contact" className="hover:text-gold transition-all text-ivory/60 hover:tracking-[0.5em]">Visit Us</Link>
         </div>
 
         <div className="flex items-center gap-6">
